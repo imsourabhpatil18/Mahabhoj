@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "mahabhoj",
+    "slug": "mahabhoj",
+    "version": "1.0.0",
+    "scheme": "mahabhoj",
+    "orientation": "portrait",
+    "icon": "./assets/MahabhojLogo.png",
+    "userInterfaceStyle": "automatic",
+    "jsEngine": "hermes",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mahabhoj.apk",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "This app uses the document picker library to select files.",
+        "NSCameraUsageDescription": "This app uses the camera to do live streaming."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/MahabhojLogo.png"
+      },
+      "package": "com.silocloud.streamdeck",
+      "permissions": [
+        "CAMERA",
+        "SCHEDULE_EXACT_ALARM",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/MahabhojLogo.png"
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Streamdeck to access your camera",
+          "microphonePermission": "Allow Streamdeck to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ]
+    ]
+  }
+}
